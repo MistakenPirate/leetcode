@@ -12,8 +12,10 @@ public:
                 if(nums[l] == 0) zeros--;
                 l++;
             }
-            int len = r - l + 1;
-            maxLen = max(maxLen, len);
+            if(zeros <= k){
+                int len = r - l + 1;
+                maxLen = max(maxLen, len);
+            }
             r++;
         }
 
